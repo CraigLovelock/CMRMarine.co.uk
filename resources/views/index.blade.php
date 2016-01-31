@@ -5,7 +5,7 @@
     <header class="tile header">
         <div class="container">
             <a href="/">
-                <img src="/images/logo-svg.svg" alt="cmr marine logo" />
+                <img src="/images/logo-outlined.svg" alt="cmr marine logo" />
             </a>
 
             <nav class="nav">
@@ -139,7 +139,7 @@
                 <h3 class="object heading-style-two underline">Get In Contact</h3>
             </div>
             <div class="left">
-                {!! Form::open(['class' => 'object form']) !!}
+                {!! Form::open(['url' => '/contact', 'action' => 'post', 'class' => 'object form']) !!}
                     {!! Form::text('name', NULL, ['class' => 'form-control', 'placeholder' => 'Enter your name']) !!}
                     {!! Form::textarea('message', NULL, ['class' => 'form-control', 'placeholder' => 'Enter your message / question']) !!}
                     {!! Form::submit('Send Message', ['class' => 'object button solid dark-blue']) !!}
