@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="204px" height="52px" viewBox="0 0 204 52" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.4 (15575) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Desktop-HD" sketch:type="MSArtboardGroup" transform="translate(-120.000000, -23.000000)">
+            <g id="Group" sketch:type="MSLayerGroup" transform="translate(120.000000, 23.000000)">
+                <rect id="Rectangle-2" fill="#2C3E4F" sketch:type="MSShapeGroup" x="0" y="0" width="83.7857143" height="52"></rect>
+                <rect id="Rectangle-2" fill="#2E81B7" sketch:type="MSShapeGroup" x="83.7857143" y="0" width="120.214286" height="52"></rect>
+                <text id="Marine" sketch:type="MSTextLayer" font-family="Open Sans" font-size="27.3214286" font-weight="bold" fill="#FFFFFF">
+                    <tspan x="94.7142857" y="35.3859649">Marine</tspan>
+                </text>
+                <text id="CMR" sketch:type="MSTextLayer" font-family="Open Sans" font-size="27.3214286" font-weight="bold" fill="#FFFFFF">
+                    <tspan x="10.9285714" y="35.3859649">CMR</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

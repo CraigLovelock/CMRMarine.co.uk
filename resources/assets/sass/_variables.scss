@@ -1,0 +1,29 @@
+// colours
+$brand-dark-blue: #2C3E4F;
+$brand-blue: #2E81B7;
+$brand-light-blue: #3A99DA;
+$brand-red: #E54D42;
+$brand-offwhite: #ECF0F1;
+
+// typography
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,600,400italic,600italic,700,700italic,800,800italic);
+
+$font-open-sans: 'Open Sans', sans-serif;
+
+$font-light: 300;
+$font-semibold: 600;
+$font-bold: 700;
+$font-extrabold: 800;
+
+// extends
+
+.white-fade-cover {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    opacity: 0.8;
+}
