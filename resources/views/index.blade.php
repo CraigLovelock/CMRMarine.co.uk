@@ -2,18 +2,18 @@
 
 @section('content')
 
-    <header class="tile header">
+    <header class="tile header" id="home">
         <div class="container">
-            <a href="/">
+            <a href="#home">
                 <img src="/images/logo-outlined.svg" alt="cmr marine logo" />
             </a>
 
             <nav class="nav">
-                <li><a href="#">Home</a></li><!--
-                --><li><a href="#">About</a></li><!--
-                --><li><a href="#">Mast Repairs</a></li><!--
-                --><li><a href="#">Hydraulics</a></li><!--
-                --><li class="object button ghost-button blue"><a href="#">Contact</a></li>
+                <li><a href="#home">Home</a></li><!--
+                --><li><a href="#about">About</a></li><!--
+                --><li><a href="#mast">Mast Repairs</a></li><!--
+                --><li><a href="#hydro">Hydraulics</a></li><!--
+                --><li class="object button ghost-button blue"><a href="#contact">Contact</a></li>
             </nav>
             <div class="menu-icon">
                 <i class="fa fa-align-justify"></i>
@@ -29,8 +29,8 @@
     <section class="tile full-page-image-with-center-text">
         <div class="container">
             <div class="central-cta">
-                <h1 class="object heading-style-one">custom mast repairs</h1>
-                <h3 class="object subheading-style-one">Suspendisse tellus metus, dapibus non sapien pretium, pulvinar cursus dui. Morbi vel pretium turpis. </h3>
+                <h1 class="object heading-style-one">custom mast repairs & hydraulics</h1>
+                <h3 class="object subheading-style-one"></h3>
                 <a href="#" class="object button solid dark-blue">
                     mast repair and hydraulics
                 </a>
@@ -38,44 +38,42 @@
         </div>
     </section>
 
-    <section class="tile about-us">
+    <section class="tile about-us" id="about">
         <div class="container">
             <div class="inner">
                 <h3 class="object heading-style-two underline">About CMR Marine</h3>
                 <div class="body-style">
-                    <p>Curabitur aliquam rutrum magna, quis molestie felis condimentum at. Sed maximus justo et quam pellentesque, eu tincidunt ipsum mattis.</p>
-                    <p>Donec eget risus eu metus efficitur faucibus non rutrum mi. Donec sit amet mattis ex, non mollis erat.</p>
-                    <p>Pellentesque facilisis egestas varius. In vehicula nunc magna, non consequat nulla fringilla in. Pellentesque sed sem nunc.</p>
+                    <p>Not only is this service mobile, it is operated by our engineer who has 30 years of experience working in all aspects of mast manufacture, repairs and rebuilds. This includes rigging hydraulics and manufacturing custom fittings to suit your needs.</p>
                 </div>
             </div>
             <div class="object grid four-col">
                 <ul>
                     <li>
                         <i class="fa fa-anchor icon"></i>
-                        <span class="heading">mast repairs</span>
+                        <span class="heading" id="mast">mast repairs</span>
                         <p class="text">
-                            Donec eget risus eu metus efficitur faucibus non rutrum mi. Donec sit amet mattis ex, non mollis erat.
+                            Supply and repairs on any aluminium or carbon masts, booms and associated fittings.
                         </p>
                     </li><!--
                     --><li>
                         <i class="fa fa-wrench icon"></i>
-                        <span class="heading">hydraulics</span>
+                        <span class="heading" id="#hydro">hydraulics</span>
                         <p class="text">
-                            Donec eget risus eu metus efficitur faucibus non rutrum mi. Donec sit amet mattis ex, non mollis erat.
+                            Inspection, service, maintenance, repair, installion and test for all types of mast hydraulic systems.
                         </p>
                     </li><!--
                     --><li>
                         <i class="fa fa-clock-o icon"></i>
                         <span class="heading">24 / 7 service</span>
                         <p class="text">
-                            Donec eget risus eu metus efficitur faucibus non rutrum mi. Donec sit amet mattis ex, non mollis erat.
+                            Emergency call out at any time of the day including out of hours.
                         </p>
                     </li><!--
                     --><li>
                         <i class="fa fa-hand-paper-o icon"></i>
                         <span class="heading">custom fabrication</span>
                         <p class="text">
-                            Donec eget risus eu metus efficitur faucibus non rutrum mi. Donec sit amet mattis ex, non mollis erat.
+                            Supply and manufacture aluminum and stainless steel fittings as required.
                         </p>
                     </li>
                 </ul>
@@ -83,7 +81,7 @@
         </div>
     </section>
 
-    <section class="tile heading-block-with-image-and-content">
+    <section class="tile heading-block-with-image-and-content" id="mast">
         <div class="container">
             <div class="inner">
                 <h3 class="object block-heading underline">Mast Repairs</h3>
@@ -108,7 +106,7 @@
         </div>
     </section>
 
-    <section class="tile heading-block-with-image-and-content flipped">
+    <section class="tile heading-block-with-image-and-content flipped" id="hydro">
         <div class="container">
             <div class="inner">
                 <h3 class="object block-heading underline">Hydraulics</h3>
@@ -132,7 +130,7 @@
         </div>
     </section>
 
-    <section class="tile contact">
+    <section class="tile contact" id="contact">
         <div id="map"></div>
         <div class="container">
             <div class="inner">
@@ -141,6 +139,8 @@
             <div class="left">
                 {!! Form::open(['url' => '/contact', 'action' => 'post', 'class' => 'object form']) !!}
                     {!! Form::text('name', NULL, ['class' => 'form-control', 'placeholder' => 'Enter your name']) !!}
+                    {!! Form::email('email', NULL, ['class' => 'form-control', 'placeholder' => 'Enter your email']) !!}
+                    {!! Form::number('number', NULL, ['class' => 'form-control', 'placeholder' => 'Enter your number']) !!}
                     {!! Form::textarea('message', NULL, ['class' => 'form-control', 'placeholder' => 'Enter your message / question']) !!}
                     {!! Form::submit('Send Message', ['class' => 'object button solid dark-blue']) !!}
                 {!! Form::close() !!}
@@ -150,10 +150,11 @@
                     <i class="fa fa-map-signs"></i>
                     <span>Address</span>
                     <p>
-                        Unit 12 <br />
-                        Priory Road <br />
-                        Netley, Southampton <br />
-                        SO19 5SP
+                        Unit 6, Mill View Barn<br />
+                        Grange Road
+                        Netley
+                        Southampton <br />
+                        SO31 8GD
                     </p>
                 </div>
                 <div class="icon-with-text-and-info">
@@ -164,12 +165,13 @@
                 <div class="icon-with-text-and-info">
                     <i class="fa fa-phone"></i>
                     <span>Phone</span>
-                    <p>07843 128781</p>
+                    <p>07342 969 868</p>
                 </div>
                 <div class="icon-with-text-and-info">
                     <i class="fa fa-clock-o"></i>
                     <span>Opening Hours</span>
-                    <p>24 Hours, 7 Days a Week.</p>
+                    <p>7am - 6pm</p>
+                    <p>Emergency services out of hours</p>
                 </div>
             </div>
         </div>
@@ -181,7 +183,7 @@
                 tim@cmrmarine.co.uk
             </div><!--
             --><div class="right">
-                07843 128781
+                07342 969 868
             </div>
         </div>
     </section>
@@ -201,7 +203,7 @@
     <script>
           var map;
           function initMap() {
-            var mylatlong = {lat: 50.8632454, lng: -1.3157598};
+            var mylatlong = {lat: 50.8982929, lng: -1.4308836};
             map = new google.maps.Map(document.getElementById('map'), {
               center: mylatlong,
               zoom: 14,

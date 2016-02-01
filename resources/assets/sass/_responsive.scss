@@ -20,6 +20,13 @@
     }
 }
 
+@media all and (min-width: 820px) {
+    .menu-icon,
+    .menu-close-icon {
+        display: none !important;
+    }
+}
+
 @media all and (max-width: 820px) {
     .tile {
         &.header {
@@ -178,7 +185,7 @@
         line-height: 59px;
     }
     .object.subheading-style-one {
-        font-size: 16px;
+        font-size: 18px;
         line-height: 26px;
     }
     .object.button.solid.dark-blue {
@@ -218,8 +225,8 @@
         margin-top: 20px;
     }
     .object.subheading-style-one {
-        font-size: 14px;
-        line-height: 24px;
+        font-size: 18px;
+        line-height: 26px;
     }
     .tile.full-page-image-with-center-text .central-cta .button {
         margin-top: 20px;
