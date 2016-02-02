@@ -14,7 +14,7 @@ class ContactController extends Controller
     public function send(Request $request)
     {
 
-        $this->validate($request, [
+        /*$this->validate($request, [
             'name' => 'required',
             'email' => 'required',
             'number' => 'required',
@@ -53,6 +53,27 @@ class ContactController extends Controller
             return Response::json(['success' => true, 'message' => 'Thank you, your message has sent.'], 200);
         } else {
             return Response::json(['success' => false, 'message' => 'There was an error. Please directly email us.'], 200);
+        }**/
+
+        $this->validate($request, [
+            'name' => 'required',
+            'email' => 'required',
+            'number' => 'required',
+            'message' => 'required',
+        ]);
+
+        $user = [];
+
+        Mail::send('emails.contact', ['user' => $user], function ($m) use ($user) {
+            $m->from('hello@app.com', 'Your Application');
+
+            $m->to('craiglovelock54@hotmail.co.uk', 'craig lovelock')->subject('Your Reminder!');
+        });
+
+        if( count(Mail::failures()) > 0 ) {
+            return Response::json(['success' => false, 'message' => 'There was an error. Please directly email us.'], 200);
+        } else {
+            return Response::json(['success' => true, 'message' => 'Thank you, your message has sent.'], 200);
         }
 
     }

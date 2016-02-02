@@ -57,14 +57,14 @@ $(function(){
         $$ = $(this);
         $$form = $$.closest('form');
         $(".message-box").remove();
-        $$.attr('disabled', true);
+        $$.attr('disabled', true).val("Sending...");
         $.ajax({
             url: "/contact",
             type: "POST",
             data: $$.closest('form').serialize(),
             cache: false,
             success: function(data){
-                $$.attr('disabled', false);
+                $$.attr('disabled', false).val("Send message");
                 if (data.success) {
                     $$.closest('form').fadeOut(function(){
                         $$form.after('<div class="object message-box success"><strong>Success!</strong><br />'+ data.message +'</div>');
@@ -74,7 +74,7 @@ $(function(){
                 }
             },
             error: function(data) {
-                $$.attr('disabled', false);
+                $$.attr('disabled', false).val("Send message");
                 $$form.after('<div class="object message-box error"><strong>There were validation errors.</strong><br />All fields are required, please check and re submit.</div>');
             }
         });

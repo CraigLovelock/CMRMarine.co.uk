@@ -3,10 +3,10 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="Content-Language" content="en">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <meta name=”description” content="Mast repairs and hydraulic services in Southampton"/>
         <meta name="keywords" content="mast, repair, hydralic, southampton, hampshire, netley, boat, yacht">
-        <title>CMR Marine | Custom Mast Repairs & Hydraulics</title>
+        <title>CMR Marine | Custom Mast Repairs & Hydraulics in Southampton</title>
         <link rel="icon" href="favicon.ico" type="image/x-icon" />
         <link rel="stylesheet" href="/css/app.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
