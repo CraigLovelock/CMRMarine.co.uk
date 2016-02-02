@@ -62,19 +62,69 @@ class ContactController extends Controller
             'message' => 'required',
         ]);
 
-        $user = [];
+        $uri = 'https://mandrillapp.com/api/1.0/messages/send.json';
 
-        Mail::send('emails.contact', ['user' => $user], function ($m) use ($user) {
-            $m->from('tim@cmrmarine.com', 'Your Application')
-                ->to('craiglovelock54@hotmail.co.uk', 'craig lovelock')
-                ->subject('Your Reminder!');
-        });
-
-        if( count(Mail::failures()) > 0 ) {
-            return Response::json(['success' => false, 'message' => 'There was an error. Please directly email us.'], 200);
-        } else {
-            return Response::json(['success' => true, 'message' => 'Thank you, your message has sent.'], 200);
+$postString = '{
+"key": "GymXkBwplLiYSOF-YxfyqA",
+"message": {
+    "html": "this is the emails html content",
+    "text": "this is the emails text content",
+    "subject": "this is the subject",
+    "from_email": "tim@cmrmarine.co.uk",
+    "from_name": "John",
+    "to": [
+        {
+            "email": "craiglovelock54@hotmail.co.uk",
+            "name": "Bob"
         }
+    ],
+    "headers": {
+
+    },
+    "track_opens": true,
+    "track_clicks": true,
+    "auto_text": true,
+    "url_strip_qs": true,
+    "preserve_recipients": true,
+
+    "merge": true,
+    "global_merge_vars": [
+
+    ],
+    "merge_vars": [
+
+    ],
+    "tags": [
+
+    ],
+    "google_analytics_domains": [
+
+    ],
+    "google_analytics_campaign": "...",
+    "metadata": [
+
+    ],
+    "recipient_metadata": [
+
+    ],
+    "attachments": [
+
+    ]
+},
+"async": false
+}';
+
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_URL, $uri);
+curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true );
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true );
+curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+curl_setopt($ch, CURLOPT_POST, true);
+curl_setopt($ch, CURLOPT_POSTFIELDS, $postString);
+
+$result = curl_exec($ch);
+
+echo $result;
 
     }
 }
