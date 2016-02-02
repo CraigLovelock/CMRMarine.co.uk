@@ -65,7 +65,7 @@ class ContactController extends Controller
         $user = [];
 
         Mail::send('emails.contact', ['user' => $user], function ($m) use ($user) {
-            $m->from('hello@app.com', 'Your Application');
+            $m->from('tim@cmrmarine.com', 'Your Application');
 
             $m->to('craiglovelock54@hotmail.co.uk', 'craig lovelock')->subject('Your Reminder!');
         });
