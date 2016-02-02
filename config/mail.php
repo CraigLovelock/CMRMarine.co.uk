@@ -7,8 +7,9 @@ return [
     'port' => 587,
     'from' => ['address' => null, 'name' => null],
     'encryption' => 'tls',
-    'username' => "craiglovelock54@hotmail.co.uk",
-    'password' => "GymXkBwplLiYSOF-YxfyqA",
+    'username' => 'craiglovelock54@hotmail.co.uk',
+    'password' => 'GymXkBwplLiYSOF-YxfyqA',
     'sendmail' => '/usr/sbin/sendmail -bs',
+    'pretend' => false,
 
 ];

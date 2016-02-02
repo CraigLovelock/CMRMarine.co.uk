@@ -65,9 +65,9 @@ class ContactController extends Controller
         $user = [];
 
         Mail::send('emails.contact', ['user' => $user], function ($m) use ($user) {
-            $m->from('tim@cmrmarine.com', 'Your Application');
-
-            $m->to('craiglovelock54@hotmail.co.uk', 'craig lovelock')->subject('Your Reminder!');
+            $m->from('tim@cmrmarine.com', 'Your Application')
+                ->to('craiglovelock54@hotmail.co.uk', 'craig lovelock')
+                ->subject('Your Reminder!');
         });
 
         if( count(Mail::failures()) > 0 ) {
