@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use Mail;
+use Response;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
@@ -12,6 +13,14 @@ class ContactController extends Controller
 {
     public function send(Request $request)
     {
+
+        $this->validate($request, [
+            'name' => 'required',
+            'email' => 'required',
+            'number' => 'required',
+            'message' => 'required',
+        ]);
+
         $number = ($request->number ? $request->number : "Not given");
 
         $to  = 'craiglovelock54@hotmail.co.uk';
@@ -26,8 +35,6 @@ class ContactController extends Controller
         <body>
             <p>From: $request->name</p>
             <p>Contact Number: $number</p>
-
-            <br />
             <p>Message:</p>
             <p>$request->message</p>
         </body>
@@ -43,7 +50,10 @@ class ContactController extends Controller
 
         // Mail it
         if ( $mail = mail($to, $subject, $message, $headers) ) {
-            echo "sent";
+            return Response::json(['success' => true, 'message' => 'Thank you, your message has sent.'], 200);
+        } else {
+            return Response::json(['success' => false, 'message' => 'There was an error. Please directly email us.'], 200);
         }
+
     }
 }

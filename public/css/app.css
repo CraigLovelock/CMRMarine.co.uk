@@ -49,7 +49,7 @@ table {
   width: 100%;
   height: 100vh;
   background-color: white;
-  opacity: 0.8; }
+  opacity: 0.9; }
 
 .tile.header {
   height: 100px;
@@ -130,7 +130,7 @@ table {
     position: absolute;
     top: 50%;
     left: 50%;
-    max-width: 750px;
+    max-width: 800px;
     width: 100%;
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%) translateX(-50%); }
@@ -200,7 +200,7 @@ table {
 .tile.contact {
   padding: 90px 0; }
   .tile.contact #map {
-    height: 300px;
+    height: 200px;
     width: 100%;
     display: block;
     background-color: #ECF0F1; }
@@ -244,6 +244,10 @@ table {
       margin-left: 38px;
       margin-top: 10px;
       line-height: 24px; }
+      .tile.contact .right .icon-with-text-and-info p.small {
+        font-size: 12px;
+        color: #ccc;
+        margin-top: 0; }
     .tile.contact .right .icon-with-text-and-info + .icon-with-text-and-info {
       margin-top: 30px; }
 
@@ -324,12 +328,12 @@ table {
           margin-right: 10px; }
 
 .object.heading-style-one {
-  font-size: 90px;
-  font-weight: 800;
+  font-size: 70px;
+  font-weight: 300;
   color: #2C3E4F;
   text-align: center;
   text-transform: uppercase;
-  line-height: 89px; }
+  line-height: 70px; }
 
 .object.heading-style-two {
   font-size: 30px;
@@ -362,17 +366,20 @@ table {
 .object.button {
   display: inline-block;
   padding: 6px 20px;
-  border-radius: 6px; }
+  border-radius: 6px;
+  transition: all 300ms; }
   .object.button.solid {
-    padding: 20px; }
+    padding: 16px 20px; }
     .object.button.solid.dark-blue {
       background-color: #2C3E4F;
       color: #ECF0F1;
       text-transform: uppercase;
       font-weight: 600;
-      font-size: 20px; }
+      font-size: 16px; }
       .object.button.solid.dark-blue:hover {
         background-color: #2E81B7; }
+  .object.button.half-width {
+    width: 30%; }
   .object.button.ghost-button {
     padding: 0; }
     .object.button.ghost-button a {
@@ -381,11 +388,21 @@ table {
       width: 100%;
       height: 100%; }
     .object.button.ghost-button.blue {
-      border: 1px solid #3A99DA;
-      color: #3A99DA; }
+      border: 1px solid #2C3E4F;
+      color: #2C3E4F; }
       .object.button.ghost-button.blue:hover {
-        background-color: #3A99DA;
+        background-color: #2C3E4F;
         color: white; }
+    .object.button.ghost-button.main-padding {
+      padding: 16px 20px;
+      color: #2C3E4F;
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 16px;
+      border: 2px solid #2C3E4F;
+      margin-left: 5%; }
+      .object.button.ghost-button.main-padding:hover {
+        background-color: #2C3E4F; }
 
 .object.grid {
   text-align: center; }
@@ -415,14 +432,20 @@ table {
   .object.grid.four-col ul li {
     width: 20.5%;
     vertical-align: top; }
+    .object.grid.four-col ul li a:hover span {
+      color: #2C3E4F; }
+    .object.grid.four-col ul li a.button {
+      padding: 8px 20px;
+      font-size: 14px;
+      margin-top: 20px; }
     .object.grid.four-col ul li + li {
       margin-left: 6%; }
 
 .object.form .form-control {
-  padding: 15px 10px;
+  padding: 10px 20px;
   display: block;
   width: 100%;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 300;
   color: #2C3E4F;
   border: 1px solid #ccc;
@@ -431,7 +454,7 @@ table {
   .object.form .form-control:focus {
     border-color: #2C3E4F; }
   .object.form .form-control + .form-control {
-    margin-top: 30px; }
+    margin-top: 20px; }
 
 .object.form textarea {
   resize: none; }
@@ -444,6 +467,39 @@ table {
   cursor: pointer;
   width: 100%;
   -webkit-appearance: none; }
+
+.object.message-box {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+  padding: 16px;
+  width: 100%;
+  margin-top: 20px;
+  border-radius: 6px;
+  text-align: center; }
+  .object.message-box .strong {
+    font-weight: 700;
+    display: block; }
+  .object.message-box.error {
+    color: #E54D42;
+    border: 1px solid #E54D42; }
+  .object.message-box.success {
+    color: #16a085;
+    border: 1px solid #16a085; }
+
+.object.mobile-call-button {
+  width: 100%;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  background-color: white;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  opacity: 0.8;
+  color: #2C3E4F;
+  box-shadow: 0 0px 3px rgba(0, 0, 0, 0.12);
+  display: none; }
 
 body, html {
   padding: 0;
@@ -542,8 +598,8 @@ a {
 
 @media all and (max-width: 800px) {
   .object.heading-style-one {
-    font-size: 80px;
-    line-height: 89px; }
+    font-size: 60px;
+    line-height: 60px; }
   .object.grid.four-col ul li {
     width: 45%; }
     .object.grid.four-col ul li + li {
@@ -551,10 +607,18 @@ a {
     .object.grid.four-col ul li:nth-child(2n) {
       margin-left: 10%; } }
 
+@media all and (max-width: 750px) {
+  .tile.full-page-image-with-center-text .central-cta .button {
+    width: 50%;
+    display: inline-block;
+    margin-left: 0;
+    margin-top: 30px; }
+    .tile.full-page-image-with-center-text .central-cta .button + .button {
+      margin-top: 20px; }
+  .tile.full-page-image-with-center-text .central-cta .subheading-style-one {
+    margin-top: 30px; } }
+
 @media all and (max-width: 700px) {
-  .object.heading-style-one {
-    font-size: 70px;
-    line-height: 79px; }
   .tile.heading-block-with-image-and-content.flipped .container .inner {
     text-align: left; }
     .tile.heading-block-with-image-and-content.flipped .container .inner .block-heading.underline:after {
@@ -629,6 +693,8 @@ a {
     bottom: 0; } }
 
 @media all and (max-width: 500px) {
+  .tile.full-page-image-with-center-text .central-cta .button {
+    width: 100%; }
   .object.heading-style-one {
     font-size: 30px;
     line-height: 39px; }
@@ -644,6 +710,8 @@ a {
 
 @media all and (max-width: 400px) {
   .tile.header .menu-icon span, .tile.header .menu-close-icon span {
-    display: none; } }
+    display: none; }
+  .object.mobile-call-button {
+    display: block; } }
 
 /*# sourceMappingURL=app.css.map */

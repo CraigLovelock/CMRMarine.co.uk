@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <header class="tile header" id="home">
+    <header class="tile header">
         <div class="container">
             <a href="#home">
                 <img src="/images/logo-outlined.svg" alt="cmr marine logo" />
@@ -14,6 +14,7 @@
                 --><li><a href="#mast">Mast Repairs</a></li><!--
                 --><li><a href="#hydro">Hydraulics</a></li><!--
                 --><li class="object button ghost-button blue"><a href="#contact">Contact</a></li>
+
             </nav>
             <div class="menu-icon">
                 <i class="fa fa-align-justify"></i>
@@ -24,15 +25,24 @@
                 <span>Close</span>
             </div>
         </div>
+
+        <div class="object mobile-call-button">
+            <a href="tel: 07342969868">
+                Click to call: 07342 969 868
+            </a>
+        </div>
     </header>
 
-    <section class="tile full-page-image-with-center-text">
+    <section class="tile full-page-image-with-center-text" id="home">
         <div class="container">
             <div class="central-cta">
                 <h1 class="object heading-style-one">custom mast repairs & hydraulics</h1>
-                <h3 class="object subheading-style-one"></h3>
-                <a href="#" class="object button solid dark-blue">
-                    mast repair and hydraulics
+                <h3 class="object subheading-style-one">Providing custom mast repairs and hydraulic services in Southampton</h3>
+                <a href="#mast" class="object button solid dark-blue half-width">
+                    our services
+                </a>
+                <a href="tel: 07342969868" class="object button ghost-button blue main-padding half-width">
+                    tel: 07342 969 868
                 </a>
             </div>
         </div>
@@ -43,38 +53,58 @@
             <div class="inner">
                 <h3 class="object heading-style-two underline">About CMR Marine</h3>
                 <div class="body-style">
-                    <p>Not only is this service mobile, it is operated by our engineer who has 30 years of experience working in all aspects of mast manufacture, repairs and rebuilds. This includes rigging hydraulics and manufacturing custom fittings to suit your needs.</p>
+                    <p>
+                        CMR Marine (Custom Mast Repairs & Hydraulics) provides mast repairs and hydraulics services in Southampton.
+                    </p>
+                    <p>
+                        Not only is this service mobile, it is operated by our engineer who has 30 years of experience working in all aspects of mast manufacture, repairs and rebuilds.</p>
+                    </p>
+                    <p>
+                        Our services include rigging hydraulics and manufacturing custom fittings to suit your needs.</p>
+                    </p>
                 </div>
             </div>
             <div class="object grid four-col">
                 <ul>
                     <li>
                         <i class="fa fa-anchor icon"></i>
-                        <span class="heading" id="mast">mast repairs</span>
+                        <a href="#mast">
+                            <span class="heading">mast repairs</span>
+                        </a>
                         <p class="text">
                             Supply and repairs on any aluminium or carbon masts, booms and associated fittings.
                         </p>
+                        <a href="#mast" class="object button ghost-button blue">More Information</a>
                     </li><!--
                     --><li>
                         <i class="fa fa-wrench icon"></i>
-                        <span class="heading" id="#hydro">hydraulics</span>
+                        <a href="#hydro">
+                            <span class="heading">hydraulics</span>
+                        </a>
                         <p class="text">
                             Inspection, service, maintenance, repair, installion and test for all types of mast hydraulic systems.
                         </p>
+                        <a href="#hydro" class="object button ghost-button blue">More Information</a>
                     </li><!--
                     --><li>
                         <i class="fa fa-clock-o icon"></i>
-                        <span class="heading">24 / 7 service</span>
+                        <a href="#contact">
+                            <span class="heading">24 / 7 Service</span>
+                        </a>
                         <p class="text">
-                            Emergency call out at any time of the day including out of hours.
+                            Emergency call out at any time of the day including out of hours and weekends / bank holidays.
                         </p>
+                        <a href="#contact" class="object button ghost-button blue">Contact</a>
                     </li><!--
                     --><li>
                         <i class="fa fa-hand-paper-o icon"></i>
-                        <span class="heading">custom fabrication</span>
+                        <a href="#contact">
+                            <span class="heading">custom fabrication</span>
+                        </a>
                         <p class="text">
-                            Supply and manufacture aluminum and stainless steel fittings as required.
+                            Supply and manufacture high quality aluminum and stainless steel fittings as required.
                         </p>
+                        <a href="#contact" class="object button ghost-button blue">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -90,7 +120,7 @@
         <div class="image" style="background-image: url(/images/rigging.jpg)"></div>
     </section>
 
-    <section class="tile basic-body-style">
+    <!--<section class="tile basic-body-style">
         <div class="container">
             <div class="inner">
                 <div class="body-style">
@@ -104,7 +134,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section>-->
 
     <section class="tile heading-block-with-image-and-content flipped" id="hydro">
         <div class="container">
@@ -115,7 +145,7 @@
         <div class="image" style="background-image: url(/images/hydo.jpg)"></div>
     </section>
 
-    <section class="tile basic-body-style">
+    <!--<section class="tile basic-body-style">
         <div class="container">
             <div class="inner">
                 <div class="body-style">
@@ -128,11 +158,11 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section>-->
 
-    <section class="tile contact" id="contact">
+    <section class="tile contact">
         <div id="map"></div>
-        <div class="container">
+        <div class="container" id="contact">
             <div class="inner">
                 <h3 class="object heading-style-two underline">Get In Contact</h3>
             </div>
@@ -141,8 +171,8 @@
                     {!! Form::text('name', NULL, ['class' => 'form-control', 'placeholder' => 'Enter your name']) !!}
                     {!! Form::email('email', NULL, ['class' => 'form-control', 'placeholder' => 'Enter your email']) !!}
                     {!! Form::number('number', NULL, ['class' => 'form-control', 'placeholder' => 'Enter your number']) !!}
-                    {!! Form::textarea('message', NULL, ['class' => 'form-control', 'placeholder' => 'Enter your message / question']) !!}
-                    {!! Form::submit('Send Message', ['class' => 'object button solid dark-blue']) !!}
+                    {!! Form::textarea('message', NULL, ['rows' => 4, 'class' => 'form-control', 'placeholder' => 'Enter your message / question']) !!}
+                    {!! Form::submit('Send Message', ['class' => 'object button solid dark-blue send-contact']) !!}
                 {!! Form::close() !!}
             </div><!--
             --><div class="right">
@@ -151,27 +181,27 @@
                     <span>Address</span>
                     <p>
                         Unit 6, Mill View Barn<br />
-                        Grange Road
-                        Netley
-                        Southampton <br />
+                        Grange Road,
+                        Netley<br />
+                        Southampton,
                         SO31 8GD
                     </p>
                 </div>
                 <div class="icon-with-text-and-info">
                     <i class="fa fa-paper-plane"></i>
                     <span>E-mail</span>
-                    <p>tim@cmrmarine.co.uk</p>
+                    <p><a href="mailto:tim@cmrmarine.co.uk">tim@cmrmarine.co.uk</a></p>
                 </div>
                 <div class="icon-with-text-and-info">
                     <i class="fa fa-phone"></i>
                     <span>Phone</span>
-                    <p>07342 969 868</p>
+                    <p><a href="tel:07342969868">07342 969 868</a></p>
                 </div>
                 <div class="icon-with-text-and-info">
                     <i class="fa fa-clock-o"></i>
                     <span>Opening Hours</span>
-                    <p>7am - 6pm</p>
-                    <p>Emergency services out of hours</p>
+                    <p>7am - 6pm*</p>
+                    <p class="small">*emergency out of hours available</p>
                 </div>
             </div>
         </div>
@@ -180,10 +210,10 @@
     <section class="tile key-contact-section">
         <div class="container">
             <div class="left">
-                tim@cmrmarine.co.uk
+                <a href="mailto:tim@cmrmarine.co.uk">tim@cmrmarine.co.uk</a>
             </div><!--
             --><div class="right">
-                07342 969 868
+                <a href="tel:07342969868">07342 969 868</a>
             </div>
         </div>
     </section>
@@ -192,10 +222,10 @@
         <div class="container">
             <p>© copyright cmrmarine 2016</p><!--
             --><ul>
-                <li><a href="#">home</a></li>
-                <li><a href="#">mast repairs</a></li>
-                <li><a href="#">hydraulics</a></li>
-                <li><a href="#">contact</a></li>
+                <li><a href="#home">home</a></li>
+                <li><a href="#mast">mast repairs</a></li>
+                <li><a href="#hydro">hydraulics</a></li>
+                <li><a href="#contact">contact</a></li>
             </ul>
         </div>
     </footer>

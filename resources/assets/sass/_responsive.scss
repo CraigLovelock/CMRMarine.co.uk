@@ -83,8 +83,8 @@
 @media all and (max-width: 800px) {
     &.object {
         &.heading-style-one {
-            font-size: 80px;
-            line-height: 89px;
+            font-size: 60px;
+            line-height: 60px;
         }
         &.grid {
             &.four-col {
@@ -104,10 +104,25 @@
     }
 }
 
+@media all and(max-width: 750px) {
+    .tile.full-page-image-with-center-text .central-cta .button {
+        width: 50%;
+        display: inline-block;
+        margin-left: 0;
+        margin-top: 30px;
+        & + .button {
+            margin-top: 20px;
+        }
+    }
+    .tile.full-page-image-with-center-text .central-cta .subheading-style-one {
+        margin-top: 30px;
+    }
+}
+
 @media all and (max-width: 700px) {
     .object.heading-style-one {
-        font-size: 70px;
-        line-height: 79px;
+        //font-size: 70px;
+        //line-height: 79px;
     }
     .tile {
         &.heading-block-with-image-and-content {
@@ -217,6 +232,9 @@
 }
 
 @media all and (max-width: 500px) {
+    .tile.full-page-image-with-center-text .central-cta .button {
+        width: 100%;
+    }
     .object.heading-style-one {
         font-size: 30px;
         line-height: 39px;
@@ -239,5 +257,8 @@
 @media all and (max-width: 400px) {
     .tile.header .menu-icon span, .tile.header .menu-close-icon span {
         display: none;
+    }
+    .object.mobile-call-button {
+        display: block;
     }
 }
