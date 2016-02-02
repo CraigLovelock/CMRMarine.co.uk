@@ -37,7 +37,7 @@
         <div class="container">
             <div class="central-cta">
                 <h1 class="object heading-style-one">custom mast repairs & hydraulics</h1>
-                <h3 class="object subheading-style-one">Providing custom mast repairs and hydraulic services in Southampton</h3>
+                <h3 class="object subheading-style-one">Providing custom mast repairs and hydraulic services on the south coast</h3>
                 <a href="#mast" class="object button solid dark-blue half-width">
                     our services
                 </a>
@@ -54,7 +54,7 @@
                 <h3 class="object heading-style-two underline">About CMR Marine</h3>
                 <div class="body-style">
                     <p>
-                        CMR Marine (Custom Mast Repairs & Hydraulics) provides mast repairs and hydraulics services in Southampton.
+                        CMR Marine (Custom Mast Repairs & Hydraulics) provides mast repairs and hydraulics services on the south coast.
                     </p>
                     <p>
                         Not only is this service mobile, it is operated by our engineer who has 30 years of experience working in all aspects of mast manufacture, repairs and rebuilds.</p>
@@ -89,7 +89,7 @@
                     --><li>
                         <i class="fa fa-clock-o icon"></i>
                         <a href="#contact">
-                            <span class="heading">24 / 7 Service</span>
+                            <span class="heading">Emergency Repairs</span>
                         </a>
                         <p class="text">
                             Emergency call out at any time of the day including out of hours and weekends / bank holidays.
@@ -120,21 +120,34 @@
         <div class="image" style="background-image: url(/images/rigging.jpg)"></div>
     </section>
 
-    <!--<section class="tile basic-body-style">
+    <section class="tile basic-body-style">
         <div class="container">
             <div class="inner">
                 <div class="body-style">
-                    <h3>Custom Fabrication</h3>
-                    <p>Suspendisse tellus metus, dapibus non sapien pretium, pulvinar cursus dui. Morbi vel pretium turpis. Integer lorem urna, sodales non ornare eu, tempor vitae dolor. Integer pulvinar justo non maximus euismod.</p>
-                    <p>Phasellus et ipsum leo. Aliquam pharetra nisi ac tortor efficitur faucibus. Curabitur elementum posuere neque, a scelerisque neque gravida scelerisque.</p>
-                    <h3>Inspection & repair</h3>
-                    <p>
-                        Nunc sed convallis dolor. In sagittis mattis gravida. Sed hendrerit consequat leo laoreet iaculis. Vivamus pellentesque hendrerit luctus. Donec non nulla urna. Sed ullamcorper non felis eget gravida. Morbi posuere quam nisi, non semper diam ultricies quis. Cras in ante et mi tincidunt convallis sit amet ut velit.
+
+                    <p class="highlight">
+                        "CMR Marine undertakes all types of mast repairs aswell as looking at ways to improve the strength in all areas of your mast, boom and the repaired areas."
                     </p>
+
+                    <h3>Replacement</h3>
+                    <p>
+                        We replace fittings / fastenings and strengthening where necessary to prevent reoccurring issues.
+                    </p>
+
+                    <h3>Strengthening</h3>
+                    <p>
+                        Our services also include strengthening high stress areas such as spreader / shroud terminal points which will prevent wear and tear and damage to your mast.
+                    </p>
+
+                    <h3>Fabrication</h3>
+                    <p>
+                        We can also fabricate / modify mast and boom fittings along with supplying machined parts.
+                    </p>
+
                 </div>
             </div>
         </div>
-    </section>-->
+    </section>
 
     <section class="tile heading-block-with-image-and-content flipped" id="hydro">
         <div class="container">
@@ -145,20 +158,27 @@
         <div class="image" style="background-image: url(/images/hydo.jpg)"></div>
     </section>
 
-    <!--<section class="tile basic-body-style">
+    <section class="tile basic-body-style">
         <div class="container">
             <div class="inner">
                 <div class="body-style">
-                    <h3>install, repair & servicer</h3>
-                    <p>Suspendisse tellus metus, dapibus non sapien pretium, pulvinar cursus dui. Morbi vel pretium turpis. Integer lorem urna, sodales non ornare eu, tempor vitae dolor. Integer pulvinar justo non maximus euismod.</p>
-                    <p>Phasellus et ipsum leo. Aliquam pharetra nisi ac tortor efficitur faucibus. Curabitur elementum posuere neque, a scelerisque neque gravida scelerisque.</p>
-                    <h3>custom parts fabrication</h3>
-                    <p>Nunc sed convallis dolor. In sagittis mattis gravida. Sed hendrerit consequat leo laoreet iaculis. Vivamus pellentesque hendrerit luctus. Donec non nulla urna.</p>
-                    <p>Sed ullamcorper non felis eget gravida. Morbi posuere quam nisi, non semper diam ultricies quis. Cras in ante et mi tincidunt convallis sit amet ut velit.</p>
+                    <p class="highlight">
+                        “Maintaining your hydraulic system is essential to prevent costly repairs and replacements.”
+                    </p>
+                    <p>
+                        The most common cause of hydraulic failure is contaminated oil. Periodically Checking / replacing the oil and filters will improve the working life of your hydraulic system and help prevent failure along with servicing / checking your hydraulic rams / operating panels.
+                    </p>
+                    <h3>Our Solutions</h3>
+                    <ul>
+                        <li>We can check and maintain your system</li>
+                        <li>Replace seals and damaged parts</li>
+                        <li>Polish out scratches on piston rods</li>
+                        <li>Strip down, clean and reassemble all hydraulic cylinders, vangs, mast jacks, pumps and operating panels</li>
+                    </ul>
                 </div>
             </div>
         </div>
-    </section>-->
+    </section>
 
     <section class="tile contact">
         <div id="map"></div>
@@ -233,7 +253,7 @@
     <script>
           var map;
           function initMap() {
-            var mylatlong = {lat: 50.8982929, lng: -1.4308836};
+            var mylatlong = {lat: 50.8887877, lng: -1.3385646};
             map = new google.maps.Map(document.getElementById('map'), {
               center: mylatlong,
               zoom: 14,

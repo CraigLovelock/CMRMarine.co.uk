@@ -86,13 +86,33 @@ a {
 	p {
 		font-size: 18px;
 		font-weight: $font-light;
-		line-height: 24px;
+		line-height: 26px;
 		color: $brand-dark-blue;
+	}
+	ul {
+		padding-left: 25px;
+		li {
+			list-style-type: circle;
+			font-size: 18px;
+			font-weight: $font-light;
+			line-height: 26px;
+			color: $brand-dark-blue;
+		}
+	}
+	p.highlight {
+		font-size: 20px;
+		font-weight: $font-semibold;
+		font-style: italic;
 	}
 	p + p,
 	p + h3,
-	h3 + p {
+	p + ul {
 		margin-top: 30px;
+	}
+
+	h3 + p,
+	h3 + ul {
+		margin-top: 15px;
 	}
 }
 

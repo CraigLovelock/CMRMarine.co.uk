@@ -198,7 +198,7 @@ table {
     text-align: left; }
 
 .tile.contact {
-  padding: 90px 0; }
+  padding: 0 0 90px 0; }
   .tile.contact #map {
     height: 200px;
     width: 100%;
@@ -394,7 +394,7 @@ table {
         background-color: #2C3E4F;
         color: white; }
     .object.button.ghost-button.main-padding {
-      padding: 16px 20px;
+      padding: 14px 20px;
       color: #2C3E4F;
       text-transform: uppercase;
       font-weight: 600;
@@ -535,13 +535,31 @@ a {
 .body-style p {
   font-size: 18px;
   font-weight: 300;
-  line-height: 24px;
+  line-height: 26px;
   color: #2C3E4F; }
+
+.body-style ul {
+  padding-left: 25px; }
+  .body-style ul li {
+    list-style-type: circle;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 26px;
+    color: #2C3E4F; }
+
+.body-style p.highlight {
+  font-size: 20px;
+  font-weight: 600;
+  font-style: italic; }
 
 .body-style p + p,
 .body-style p + h3,
-.body-style h3 + p {
+.body-style p + ul {
   margin-top: 30px; }
+
+.body-style h3 + p,
+.body-style h3 + ul {
+  margin-top: 15px; }
 
 @media all and (max-width: 1250px) {
   .container {
